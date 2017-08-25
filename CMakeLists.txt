@@ -21,6 +21,7 @@ add_definitions(-DMATPLOTLIBCPP_PYTHON_HEADER=Python.h)
 add_executable(minimal ${CMAKE_CURRENT_SOURCE_DIR}/examples/minimal.cpp)
 add_executable(basic ${CMAKE_CURRENT_SOURCE_DIR}/examples/basic.cpp)
 add_executable(modern ${CMAKE_CURRENT_SOURCE_DIR}/examples/modern.cpp)
+add_executable(animation ${CMAKE_CURRENT_SOURCE_DIR}/examples/animation.cpp)
 
 target_include_directories(minimal PRIVATE ${PYTHON_INCLUDE_DIRS})
 target_link_libraries(minimal ${PYTHON_LIBRARIES})
@@ -30,3 +31,6 @@ target_link_libraries(basic ${PYTHON_LIBRARIES})
 
 target_include_directories(modern PRIVATE ${PYTHON_INCLUDE_DIRS})
 target_link_libraries(modern ${PYTHON_LIBRARIES})
+
+target_include_directories(animation PRIVATE ${PYTHON_INCLUDE_DIRS})
+target_link_libraries(animation ${PYTHON_LIBRARIES})
